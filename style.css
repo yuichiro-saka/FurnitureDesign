@@ -252,6 +252,10 @@ li {
   border-bottom: none;
 }
 
+#company .map {
+  filter: grayscale(1);
+}
+
 #footer {
   display: flex;
   justify-content: space-between;
