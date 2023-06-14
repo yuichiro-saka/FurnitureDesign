@@ -1,0 +1,320 @@
+@charset "utf-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #333;
+  font-size: 0.875rem;
+  min-height: 100vh;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.site-title a {
+  width: 180px;
+  display: block;
+  line-height: 1px;
+}
+
+
+.wrapper {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.content {
+  padding-top: 80px;
+  padding-bottom: 160px;
+}
+
+.toggle_btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transition: all 0.5s;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+
+.toggle_btn span:nth-child(1) {
+  top: 10px;
+}
+
+.toggle_btn span:nth-child(2) {
+  bottom: 10px;
+}
+
+.open .toggle_btn span {
+  background-color: #fff;
+}
+
+.open .toggle_btn span:nth-child(1) {
+  -webkit-transform: translateY(4px) rotate(-45deg);transform: translateY(4px) rotate(-45deg);
+}
+
+.open .toggle_btn span:nth-child(2) {
+  -webkit-transform: translateY(-4px) rotate(45deg);transform: translateY(-4px) rotate(45deg);
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-list p {
+  font-size: 0.75rem;
+}
+
+.product-list li {
+  width: 23%;
+  margin-bottom: 40px;
+}
+
+.product-list img {
+  vertical-align: top;
+  margin-bottom: 10px;
+}
+
+.link-text {
+  display: block;
+  text-align: center;
+}
+
+.page-title {
+  margin-bottom: 30px;
+}
+
+#mask {
+  display: none;
+}
+
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .8;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.open #navi {
+  left: 0;
+  opacity: 1;
+}
+
+.pagenation {
+  display: flex;
+  justify-content: center;
+}
+
+.pagenation li {
+  padding: 0 20px;
+}
+
+.link-text {
+  text-align: center;
+}
+
+#header {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navi {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  color: #fff;
+  padding: 36px 50px;
+  transition: all 0.5s;
+  z-index: 20;
+}
+
+#navi li {
+  margin-bottom: 14px;
+}
+
+#navi a {
+  color: #fff;
+}
+
+#top {
+  padding-top: 80px;
+  padding-bottom: 160px;
+}
+
+#item {
+  display: flex;
+  max-width: 800px;
+  margin-bottom: 60px;
+  justify-content: space-between;
+}
+
+#item .item-img {
+  width: 50%;
+}
+
+#item .item-text {
+  width: 42%;
+}
+
+#item .item-text p {
+  margin-bottom: 30px;
+}
+
+#item dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#item dt {
+  width: 30%;
+  font-weight: normal;
+}
+
+#item dd {
+  width: 70%;
+}
+
+#about {
+  max-width: 600px;
+}
+
+#about p{
+  margin-bottom: 20px;
+  line-height: 1.9;
+}
+
+#company {
+  max-width: 600px;
+}
+
+#company .info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+#company .info dt {
+  width: 30%;
+  font-weight: normal;
+  border-bottom: 1px solid #bcb4b4;
+  padding: 20px 10px;
+}
+
+#company .info dd {
+  width: 70%;
+  border-bottom: 1px solid #bcb4b4;
+  padding: 20px 10px;
+}
+
+#company dt:last-of-type {
+  border-bottom: none;
+}
+
+#company dd:last-of-type {
+  border-bottom: none;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+#footer .copyright{
+  font-size: 0.5rem;
+}
+
+#footer .menu {
+  display: flex;
+}
+
+#footer .menu li {
+  margin-right: 30px;
+}
+
+#footer .menu li a {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 900px) {
+  .product-list li {
+    width: 47%;
+  }
+
+  #footer {
+    display: block;
+  }
+
+  #footer ul {
+    margin-bottom: 10px;
+  }
+
+  #item {
+    display: block;
+  }
+
+  #item .item-img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #item .item-text {
+    width: 100%;
+  }
+
+  #company .info {
+    display: block;
+  }
+
+  #company .info dt {
+    border-bottom: none;
+    padding: 20px 10px 5px 10px;
+  }
+
+  #company .info dd {
+    width: 100%;
+    padding: 5px 10px 20px 10px;
+  }
+}
